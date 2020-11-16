@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whats Up! || Gesture Recognizing App || Shourya Gupta || WHJR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/emoji/2x/love-you-gesture-emoji.png" type="image/x-icon">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class="containerDiv">
+            <div class="header">
+                <h1>Whats Up!</h1>
+                <img src="https://img.icons8.com/emoji/2x/love-you-gesture-emoji.png"
+                    alt="It seems you are offline. :-\">
+            </div>
+            <div class="wrapper">
+                <div class="card o">
+                    <div class="srDiv r">
+                        <h2>1</h2>
+                    </div>
+                    <h1>&#128077;</h1>
+                    <br>
+                    <h3>Like</h3>
+                    <br>
+                    <p>&#128077; respresents 'Like'. You can use this gesture if you like something.</p>
+                </div>
+                <div class="card p">
+                    <div class="srDiv y">
+                        <h2>2</h2>
+                    </div>
+                    <h1>&#128078;</h1>
+                    <br>
+                    <h3>Dislike</h3>
+                    <br>
+                    <p>&#128078; respresents 'Dislike'. You can use this gesture if you don't like something.</p>
+                </div>
+                <div class="card r">
+                    <div class="srDiv ch">
+                        <h2>3</h2>
+                    </div>
+                    <h1>&#9996;</h1>
+                    <br>
+                    <h3>Victory</h3>
+                    <br>
+                    <p>&#9996; respresents 'Victory'. You can use this gesture if you have to show that you won in
+                        something.</p>
+                </div>
+                <div class="card y">
+                    <div class="srDiv p">
+                        <h2>4</h2>
+                    </div>
+                    <h1>&#x1f919;</h1>
+                    <br>
+                    <h3>Phone Call</h3>
+                    <br>
+                    <p>&#x1f919; respresents 'Phone Call'. You can use this gesture if you want someone to make a phone
+                        call to you.</p>
+                </div>
+                <div class="card ch">
+                    <div class="srDiv o">
+                        <h2>5</h2>
+                    </div>
+                    <h1>&#128591;</h1>
+                    <br>
+                    <h3>Thanks</h3>
+                    <br>
+                    <p>&#128591; respresents 'Thanks'. You can use this gesture if you express gratitude to someone
+                        <kbd>OR</kbd> say Namaste!</p>
+                </div>
+            </div>
+            <main style="position: relative; width:100vw;">
+                <div class="webcamSection col-md-4 col-xs-12">
+                    <kbd>Camera View</kbd>
+                    <br><br>
+                    <div id="cam" width="350" height="300"></div>
+                    <br><br>
+                    <button class="btn btn-success" onclick="snap()">Take a Snapshot</button>
+                </div>
+                <div class="predictionSect col-md-4 col-xs-12">
+                    <kbd>Prediction:</kbd>
+                    <div class="objectRow">
+                        <h5 id="object"></h5>
+                    </div>
+                    <br><br>
+                    <div class="accuracyRow">
+                        <h6>Accuracy</h6>
+                        &nbsp;&nbsp;&nbsp;
+                        <progress id="acry" max="100" value="0"></progress>
+                    </div>
+                </div>
+                <div class="photoSection col-md-4 col-xs-12">
+                    <kbd>Snapshot</kbd>
+                    <br>
+                    <br>
+                    <div id="result" width="350" height="300"></div>
+                    <br>
+                    <br>
+                    <button onclick="identifyImg()" class="btn btn-warning">Predict Gesture</button>
+                </div>
+            </main>
+            
+        </div>
+    </center>
+</body>
+
+</html>

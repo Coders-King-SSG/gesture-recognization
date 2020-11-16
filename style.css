@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 200vh;
+    width: 100vw!important;
+    text-align: center;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    overflow-x: hidden;
+}
+
+center {
+    height: 200vh;
+}
+
+.container {
+    height: 200vh;
+}
+
+.header {
+    z-index: 10;
+    width: 100vw!important;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(314deg, #6b6b9c 0%, #6f8ea1 74%);
+    justify-content: center;
+    position: sticky!important;
+    top: 0px;
+}
+
+.srDiv {
+    border-radius: 100px;
+    border: 2px solid black;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.r {
+    background-color: red;
+}
+
+.y {
+    background-color: #ff0;
+}
+
+.ch {
+    background-color: #00ff00;
+}
+
+.p {
+    background-color: palevioletred;
+}
+
+.o {
+    background-color: orange;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 380px;
+    flex-wrap: wrap;
+}
+
+progress {
+    background-color: green;
+}
+
+progress::-webkit-progress-value {
+    background: lightblue;
+}
+
+progress::-moz-progress-bar {
+    background: lightcolor;
+}
+
+progress::-webkit-progress-value {
+    background: green;
+}
+
+progress::-webkit-progress-bar {
+    background: #fff;
+}
+
+.card {
+    width: 200px;
+    height: 350px;
+    color: #000;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .wrapper {
+        display: none;
+    }
+}
+
+.card h3 {
+    color: #000;
+    font-weight: 900;
+}
+
+.wrapper:hover .card {
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.wrapper .card:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+::selection {
+    color: black;
+    background-color: #ff0;
+}
